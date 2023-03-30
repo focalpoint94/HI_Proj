@@ -179,3 +179,10 @@ p.footer a {
 	color: #3182bd;
 	font-weight: 600;
 }
+
+@media (max-width: 768px) {
+	table.table {
+		font-size: 9px;
+		text-align: center;
+	}
+}
