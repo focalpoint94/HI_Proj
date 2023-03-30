@@ -1,0 +1,174 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 2rem;
+	font-style: normal;
+	font-variant: normal;
+	font-size: 1rem;
+	color: #303137;
+}
+
+.jumbotron {
+	text-align: center;
+	background: none;
+	margin-bottom: 0rem;
+	padding-bottom: 1rem;
+}
+
+div.sectionLight {
+	background-color: #eceeef;
+	padding: 2rem;
+}
+
+div.sectionDark {
+	background-color: #cccccc;
+	padding: 2rem;
+}
+
+h1.jumbotronh1 {
+	margin-bottom: 3rem;
+}
+
+p.alignLeft {
+	text-align: left;
+}
+
+div.datasets {
+	text-align: center;
+}
+
+h5.datasets {
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+}
+
+.datasets a {
+	text-decoration: none;
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 1rem;
+	display: block;
+	color: #3182bd;
+	font-weight: 600;
+}
+
+.eval h5 {
+	font-weight: 600;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.eval table {
+	text-align: center;
+}
+
+div.cm {
+	text-align: center;
+}
+
+.figure img {
+	margin-top: 4rem;
+}
+
+figcaption {
+	font-weight: 600;
+	margin-bottom: 3rem;
+}
+
+div.carousel-container {
+	text-align: center;
+}
+
+div#carouselExampleIndicators {
+	margin: auto;
+	margin-bottom: 5rem;
+}
+
+h5.gradcam {
+	font-weight: 600;
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+label.form-label {
+	font-weight: 600;
+}
+
+div.flash {
+	margin-top: 1rem;
+	font-weight: 600;
+	color: #EE4B2B;
+}
+
+input.form-control {
+	margin-bottom: 2rem;
+}
+
+form.image {
+	text-align: center;
+}
+
+h2.img {
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+}
+
+.xray h2 span {
+	font-weight: 600;
+}
+
+img.card-img-top {
+	max-height: 500px;
+	max-width: 80%;
+	margin-bottom: 4rem;
+}
+
+div.results {
+	margin: auto;
+	align-items: center;
+	text-align: center;
+}
+
+.xray h2 {
+	padding: 2rem;
+}
+
+i.fa-github {
+	color: #3b5998;
+	font-size: 2rem;
+}
+
+i.fa-google-drive {
+	color: #3b5998;
+	font-size: 2rem;
+}
+
+footer {
+	text-align: center;
+}
+
+h4.footer {
+	color: #fff;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+p.footer {
+	color: #fff;
+	margin: 0rem;
+}
+
+div.container-links p {
+	line-height: 1rem;
+	margin: 1rem;
+}
+
+p.footer a {
+	text-decoration: none;
+	color: #3182bd;
+	font-weight: 600;
+}

@@ -1,0 +1,16 @@
+venv/
+
+flaskr/static/assets/*.zip
+
+flaskr/static/assets/test.zip
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+
+*.egg-info/
+
+
