@@ -26,6 +26,7 @@ div.sectionDark {
 
 h1.jumbotronh1 {
 	margin-bottom: 3rem;
+	font-size: 2.5rem;
 }
 
 p.alignLeft {
@@ -59,8 +60,14 @@ h5.datasets {
 	text-align: center;
 }
 
+div.eval {
+	display: block;
+}
+
 .eval table {
 	text-align: center;
+	table-layout: fixed;
+  width: 100%;   
 }
 
 div.cm {

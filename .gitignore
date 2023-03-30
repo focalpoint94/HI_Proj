@@ -2,8 +2,6 @@ venv/
 
 flaskr/static/assets/*.zip
 
-flaskr/static/assets/test.zip
-
 *.pyc
 __pycache__/
 
