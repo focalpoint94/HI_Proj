@@ -52,7 +52,7 @@
 				<div class="col-sm-12">
 					<div class="jumbotron jumbotron-fluid">
   					<div class="container">
-    					<h1 class="display-4 jumbotronh1">Project: X-Ray Diagnosis</h1>
+    					<h1 class="display-4 jumbotronh1">Project: X-ray Diagnosis</h1>
     					<p class="lead alignLeft">
 								<br>
 								Chest radiography is a commonly employed method for diagnosing respiratory ailments, such as COVID-19 and tuberculosis. Beyond providing an initial assessment of various respiratory conditions, chest X-rays are relatively inexpensive and widely accessible. Nonetheless, despite recent technological advancements, medical professionals must still interpret X-ray images to determine patients' health status. While such procedures may yield accurate diagnoses for experienced practitioners, it requires additional time and effort. Our team contends that machine learning algorithms, particularly those within the subfield of deep learning, offer a promising avenue for improving diagnostic accuracy in chest illnesses and for expediting such procedures.
@@ -109,7 +109,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="container eval">
-						<h5>Evaluation Metrics &#40Accuracy : 98%&#41 </h5>
+						<h5>Evaluation Metrics<br>&#40Accuracy : 98%&#41</h5>
 						<table class="table">
 							<thead>
 								<tr>
@@ -222,7 +222,7 @@
 				<div class="col-sm-12">
 					<div class="jumbotron jumbotron-fluid">
 						<div class="container">
-							<h1 class="display-4">Diagnosis</h1>
+							<h1 class="display-4 jumbotronh1">Diagnosis</h1>
 						</div>
 					</div>
 				</div>
@@ -235,7 +235,7 @@
 						<label class="form-label" for="upload">Upload X-ray</label>
 						<form method=post enctype=multipart/form-data class="image">
 							<input id="upload" type="file" class="form-control" name="file">
-							<input type=submit value=Upload>
+							<input id="submit" type=submit value=Upload>
 							{% for message in get_flashed_messages() %}
 								<div class="flash">{{ message }}</div>
 							{% endfor %}
@@ -243,6 +243,13 @@
 					</div>
 				</div>
 				<div class="col-lg-4"></div>
+				<div class="col-sm-12">
+					<div class="container">
+						<div id="loading">
+							<img id="loading-image" src="static/assets/loader.gif" alt="Loading..." />
+						</div>
+					</div>
+				</div>
 			</div>
 
 			{% if image1 %}
@@ -280,7 +287,7 @@
 				<div class="col-sm-12">
 					<div class="jumbotron jumbotron-fluid">
   					<div class="container">
-    					<h1 class="display-4 jumbotronh1">Reference</h1>
+    					<h1 class="display-4 jumbotronh1">References</h1>
     					<p class="lead alignLeft">
 								<br>
 								[1] Weiss, K., Khoshgoftaar, T. M., & Wang, D. (2016). A survey of transfer learning. Journal of Big data, 3(1), 1-40.
@@ -348,6 +355,17 @@
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="{{ url_for('static', filename='bootstrap-4.6.2-dist/js/bootstrap.min.js') }}"></script>
+
+	<script>
+		$(window).on('load', function () {
+			$('#loading').hide();
+		});
+
+		$('#submit').click(function(){
+  		$('#loading').show(); //<----here
+   	});
+
+	</script>
 
 </body>
 

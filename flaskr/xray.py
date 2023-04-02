@@ -26,6 +26,9 @@ import tensorflow as tf
 import numpy as np
 
 
+from . import classifier
+
+
 bp = Blueprint('xray', __name__)
 
 
@@ -106,6 +109,9 @@ def predict_image(image_path):
     image = tf.keras.preprocessing.image.load_img(image_path, target_size=(IMAGE_SIZE, IMAGE_SIZE))
     image = tf.keras.preprocessing.image.img_to_array(image)
     image = tf.expand_dims(image, 0)
+    # verify if the image is X-ray
+    if classifier.isXray(image) is False:
+        flash("The uploaded image does not seem to be X-ray.")
     prediction = model.predict(image)
     prediction = [p for p in prediction]
     return LABELS[np.argmax(prediction[0])], "{:.2f}%".format(np.max(prediction[0])*100)
