@@ -8,6 +8,13 @@ The web application is deployed on https://hiflaskr.herokuapp.com. It is the sam
 # User Instructions
 The website has `About`, `Implementation`, `Diagnosis`, and `References` Section. The actual analysis is in the `Diagnosis` Section, where the user will upload the image to be analyzed. For testing purposes, the user can use any of the four images in the directory `/test_data`.
 
+# Startup and Configuration Files
+1. `requirements.txt`
+2. `Dockerfile`
+3. `server.py`
+
+Above are necessary startup and configuration files. We talk more about how to utilize these files in UserManual file.
+
 # How to Deploy Locally
 
 1. Execute '`pip install -r requirements.txt`' inside the main HI_PROJ directory to install necessary dependencies.
@@ -17,6 +24,11 @@ The website has `About`, `Implementation`, `Diagnosis`, and `References` Section
     b. Execute `docker run -p 5000:5000 {you_image_id}` in the main directory.
     c. Go to `localhost:5000` in your web browser to examine the web application locally.
 4. In order to use the website, the user must have a chest x-ray image that can be uploaded. The upload button is at the near bottom of the website, while before talks about our project introduction, implementation, evaluation metrics, and example analysis. Download the images in the `/test_data` directory for chest x-ray images that you can upload to the website.
+
+# Architecture Diagram
+Our main architecture diagram is presented below. Users can upload an x-ray image through our website (https://hiflaskr.herokuapp.com). Once an image is uploaded, the website sends it to the backend, which feeds it into a deep learning model. This model predicts whether the chest image indicates covid-19, tuberculosis, or no symptoms for the patient. Moreover, the model highlights which pixels in the image contributed the most to its decision. By doing so, the user gains insight into the reasoning behind the model's decision, enabling them to make an informed decision if a correction is necessary.
+
+![alt text](misc/architecture.png)
 
 # Research
 
